@@ -1,0 +1,373 @@
+<!-- Section animation -->
+<!-- Contribution -->
+<!-- Contact us -->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Ahmed Gouda</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Tab Icon -->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Yanone+Kaffeesatz:wght@500&display=swap"
+        rel="stylesheet">
+    <!--Font Aweasome-->
+    <script src="https://kit.fontawesome.com/f523a145d2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+
+        <div class="nav-tech"></div>
+
+        <ul class="nav-links">
+            <li>
+                <a class="logo" href="index.html">
+                    <img src="images/Logo.png" alt="">
+                </a>
+            </li>
+
+            <li class="nav-item nav-active">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <div class="nav-text">Home</div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#about">
+                    <i class="far fa-address-card"></i>
+                    <div class="nav-text">About</div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="index.html">
+                    <i class="fas fa-laptop-code" style="margin-right: 11.25px;"></i>
+                    <div class="nav-text">Projects</div>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="index.html">
+                    <i class="far fa-envelope"></i>
+                    <div class="nav-text">Contact</div>
+                </a>
+            </li>
+
+
+        </ul>
+
+    </nav>
+    <div class="content" id="content">
+        <div class="landing-page" id="particles-js">
+            <div class="welcome" id="welcome">
+                Hello there,<br>
+                I'm Ahmed Gouda <br>
+                <span id="job">A Game & Web Developer</span>
+            </div>
+
+            <div class="personal-photo">
+                <img class="pp-solid" id="pp-solid" src="images/Me solid.png"></image>
+                <img class="pp" id="pp" src="images/Me.png"></image>
+            </div>
+
+            <button class="discover-btn" onclick="window.location.href='#about'">Discover More!</button>
+        </div>
+
+        <div id="about">
+
+            <div class="about-dis">
+                <h1 class="tag">&lt;About&gt;</h1>
+                <div>
+                    I am Ahmed Gouda, a junior high school student at Gharbiya STEM school and a dreamer whose curiosity
+                    led him to his love of computer science and programming. I dream to be able to make games that
+                    spread happiness inside many's hearts, or websites that help people in their daily life. I will do
+                    my best to achieve this dream with my experience that will increase along the journey.
+                </div>
+                <h1 class="tag">&lt;&#47;About&gt;</h1>
+            </div>
+            <!--404-->
+            <div class="cont-404">
+                <p class="mega">4<span class="boom">0</span>4
+                <div class="bola"></div>
+                </p>
+                <p class="mini">Ahmed not found!</p>
+            </div>
+        </div>
+
+        <div id="projects">
+
+            <div class="project-viewer">
+                <a href="HTML/projects.html" class="more-projects">
+                    <button>View All</button>
+                </a>
+                <h1 class="tag">&lt;Projects&gt;</h1>
+                <div class="project-grid">
+                    <div id="project1" class="projects-main">
+                        <div class="project-details">
+                            <div>Project title1</div>
+                            <div>Date</div>
+                            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et obcaecati consequuntur
+                                sapiente, quibusdam repudiandae cum iusto vitae laboriosam omnis distinctio voluptatibus
+                            </div>
+                            <button id="projectb1" onclick="box1(projectb1)">View Project -></button>
+                        </div>
+                    </div>
+
+                    <div class="projects-sub">
+                        <div id="project2" class="projects">
+                            <div class="project-details">
+                                <div>Project title2</div>
+                                <div>Date</div>
+                                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et obcaecati consequuntur
+                                    sapiente, quibusdam repudiandae cum iusto vitae laboriosam omnis distinctio
+                                    voluptatibus
+                                </div>
+                                <button id="projectb2" onclick="box1(projectb2)">View Project -></button>
+                            </div>
+                        </div>
+
+                        <div id="project3" class="projects">
+                            <div class="project-details">
+                                <div>Project title3</div>
+                                <div>Date</div>
+                                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et obcaecati consequuntur
+                                    sapiente, quibusdam repudiandae cum iusto vitae laboriosam omnis distinctio
+                                    voluptatibus
+                                </div>
+                                <button id="projectb3" onclick="box1(projectb3)">View Project -></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="tag">&lt;&#47;Projects&gt;</h1>
+            </div>
+        </div>
+
+        <div id="skills">
+            <div class="section-content">
+                <h1 class="tag">&lt;Skills&gt;</h1>
+
+                <div class="skill">
+                    <img src="images/skills/html.png" id="html" class="skill-active" onclick="skill()">
+                    <img src="images/skills/css.png" id="css" onclick="skill()">
+                    <img src="images/skills/js.png" id="js" onclick="skill()">
+                    <img src="images/skills/c-plusplus.png" id="c-plusplus" onclick="skill()">
+                    <img src="images/skills/c-sharp.png" id="c-sharp" onclick="skill()">
+                    <img src="images/skills/three-d.png" id="three-d" onclick="skill()">
+                </div>
+                <div class="skill-data">
+                    <div id="skill-projects">
+                        <div>Projects</div>
+                        <div>4</div>
+                    </div>
+
+                    <div id="skill-experience">
+                        <div>Years of Experience</div>
+                        <div>1</div>
+                    </div>
+                </div>
+
+
+                <li>
+                    <img id="skill-preview" src="images/skills/html.png"></img>
+                    <span class="bar"><span id="skill-progress"></span></span>
+                </li>
+
+                <div class="con">
+                    <div class="con-title">Contributions</div>
+                    <div class="org-map">
+
+                        <div class="org" id="org1">
+                            <div class="org-box">
+                                <img src="images/contributions/hack.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org2">
+                            <div class="org-box">
+                                <img src="images/contributions/gharbiya.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org3">
+                            <div class="org-box">
+                                <img src="images/contributions/resala.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org4">
+                            <div class="org-box">
+                                <img src="images/contributions/picassos.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org5">
+                            <div class="org-box">
+                                <img src="images/contributions/isef.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org6">
+                            <div class="org-box">
+                                <img src="images/contributions/iymc.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org7">
+                            <div class="org-box">
+                                <img src="images/contributions/gads.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org8">
+                            <div class="org-box">
+                                <img src="images/contributions/gspj.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org9">
+                            <div class="org-box">
+                                <img src="images/contributions/upkey.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org10">
+                            <div class="org-box">
+                                <img src="images/contributions/shams.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org11">
+                            <div class="org-box">
+                                <img src="images/contributions/kangaroo.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org12">
+                            <div class="org-box">
+                                <img src="images/contributions/junior.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org13">
+                            <div class="org-box">
+                                <img src="images/contributions/ted-bns.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org14">
+                            <div class="org-box">
+                                <img src="images/contributions/experiment.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org15">
+                            <div class="org-box">
+                                <img src="images/contributions/afs.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org16">
+                            <div class="org-box">
+                                <img src="images/contributions/iyna.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org17">
+                            <div class="org-box">
+                                <img src="images/contributions/mun-sh.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org18">
+                            <div class="org-box">
+                                <img src="images/contributions/mun-oct.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="org" id="org19">
+                            <div class="org-box">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <h1 class="tag">&lt;&#47;Skills&gt;</h1>
+            </div>
+        </div>
+
+        <div id="contact">
+            <h1 class="tag">&lt;Contact&gt;</h1>
+            <div class="contact-content">
+
+
+                <form method="post" action="index.html" class="contact-main">
+                    <div>
+                        <input type="text" name="name" placeholder="Name" id="name">
+                        <label for="name" id="name-label">Name</label>
+                    </div>
+
+                    <div>
+                        <input type="text" name="e-mail" placeholder="E-mail" id="e-mail">
+                        <label for="e-mail" id="e-mail-label">E-mail</label>
+                    </div>
+
+                    <div>
+                        <input type="text" name="subject" placeholder="Subject" id="subject">
+                        <label for="subject" id="subject-label">Subject</label><br>
+                    </div>
+
+                    <textarea type="text" name="message" placeholder="Your Message" id="message"></textarea><br>
+                    <button type="submit" name="submit">Send Mail</button>
+                </form>
+
+            </div>
+            <h1 class="tag">&lt;&#47;Contact&gt;</h1>
+        </div>
+
+
+
+
+        <!--Pop up-->
+        <div class="project-window" id="popup">
+            <i class="fas fa-times" onclick="popup()"></i>
+            <h1 class="project-title" id="pTitle">Project</h1>
+            <img class="project-img" id="pImg"></img>
+            <p class="project-dis" id="pDis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus recusandae
+                ratione ex, odio laboriosam voluptates modi excepturi rem nam cupiditate dolorum dolor deserunt
+                maxime eos totam? Magnam dolorem perspiciatis quibusdam.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Ducimus recusandae
+                ratione ex, odio laboriosam voluptates modi excepturi rem nam cupiditate dolorum dolor deserunt
+                maxime eos totam? Magnam dolorem perspiciatis quibusdam.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Ducimus recusandae
+                ratione ex, odio laboriosam voluptates modi excepturi rem nam cupiditate dolorum dolor deserunt
+                maxime eos totam? Magnam dolorem perspiciatis quibusdam.
+            </p>
+            <button>Visit project</button>
+        </div>
+        <!--Pop up-->
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+        <script src="js/script-home.js"></script>
+</body>
+
+
+</html>
