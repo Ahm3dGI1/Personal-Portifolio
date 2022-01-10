@@ -297,3 +297,31 @@ function skill() {
         skillProgress.style.width = '70%';
     }
 }
+
+/* Contact */
+
+$('.submit').click(function (event) {
+
+    var name = $('#name').val();
+    var emailLable = document.getElementById('e-mail-label');
+    var email = $('#e-mail').val();
+    var subject = $('#subject').val();
+    var message = $('#message').val();
+
+    const validateEmail = (email) => {
+        return String(email)
+            .toLowerCase()
+            .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            );
+    };
+
+    if (!validateEmail(email)) {
+        event.preventDefault()
+        emailLable.classList.add('invalid-email');
+        emailLable.innerHTML = "*invalid E-mail";
+    }
+
+
+    console.log(email);
+});

@@ -821,12 +821,15 @@ body{
 }
 
 .contact-content{
+    border-left: #C3073F solid 3px;
+    padding-left: 7px;
+}
+
+.contact-methods{
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    border-left: #C3073F solid 3px;
-    padding-left: 7px;
     transition: 0.6s;
 }
 
@@ -943,6 +946,11 @@ input:focus, #message:focus{
     font-size: 20px;
 }
 
+.invalid-email, #e-mail:focus ~ .invalid-email{
+    color: red;
+    font-weight: 300;
+}
+
 
 /*Contact*/
 
@@ -977,4 +985,41 @@ input:focus, #message:focus{
 
 @media (max-width: 768px){
 
+}
+
+@keyframes org {
+    5%{
+        width: 15px;
+        height: 15px;
+    }
+
+    50%{
+        width: 150px;
+        height: 15px;
+    }
+
+    100%{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@keyframes org-img {
+    5%{
+        width: 1px;
+        height: 1px;
+    }
+
+    60%{
+        width: 1px;
+        opacity: 0;
+        display: none;
+    }
+    
+    100%{
+        display: block;
+        opacity: 1;
+        width: 120px;
+        height: 120px;
+    }
 }
