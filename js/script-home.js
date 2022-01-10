@@ -298,16 +298,16 @@ function skill() {
     }
 }
 
+/*Skills*/
+
+
 /* Contact */
 
-$('.submit').click(function (event) {
+var message = "";
 
-    var name = $('#name').val();
-    var emailLable = document.getElementById('e-mail-label');
+$(".submit").on("click", function () {
+
     var email = $('#e-mail').val();
-    var subject = $('#subject').val();
-    var message = $('#message').val();
-
     const validateEmail = (email) => {
         return String(email)
             .toLowerCase()
@@ -317,11 +317,25 @@ $('.submit').click(function (event) {
     };
 
     if (!validateEmail(email)) {
-        event.preventDefault()
-        emailLable.classList.add('invalid-email');
-        emailLable.innerHTML = "*invalid E-mail";
+        alert('You have entered and invalid E-mail.');
     }
 
+    else {
+        $.ajax({
+            url: "https://formspree.io/f/mwkypdzw",
+            method: "POST",
+            data: {
+                Name: $('#name').val(),
+                Subject: $('#subject').val(),
+                Email: $('#e-mail').val(),
+                Message: $('#message').val()
+            },
+            dataType: "json"
+        });
+        alert('Thanks for the email, we\'ll be in touch promptly.');
+    }
 
-    console.log(email);
+    return false;
 });
+
+/* Contact */
