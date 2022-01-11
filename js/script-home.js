@@ -79,11 +79,11 @@ render();
 
 /*projects grid*/
 var projects = [
-    'images/projects/3d/doughnut.jpg',
-    'images/projects/3d/character.jpg',
-    'images/projects/3d/pistol.jpg',
-    'images/projects/3d/rock.jpg',
-    'images/projects/3d/Katana.jpg',
+    'images/projects/threed/doughnut.jpg',
+    'images/projects/threed/character.jpg',
+    'images/projects/threed/pistol.jpg',
+    'images/projects/threed/rock.jpg',
+    'images/projects/threed/Katana.jpg',
     'images/projects/gspj/gspj.jpg',
     'images/projects/minibook/minibook.jpg',
     'images/projects/github/login-page-cover.jpg'
@@ -107,9 +107,9 @@ projectb1 = { num: 0 },
     projectb2 = { num: 1 },
     projectb3 = { num: 2 };
 
-project1.style.backgroundImage = "url( images/projects/3d/doughnut.jpg )";
-project2.style.backgroundImage = "url( images/projects/3d/character.jpg )";
-project3.style.backgroundImage = "url( images/projects/3d/pistol.jpg )";
+project1.style.backgroundImage = "url( images/projects/threed/doughnut.jpg )";
+project2.style.backgroundImage = "url( images/projects/threed/character.jpg )";
+project3.style.backgroundImage = "url( images/projects/threed/pistol.jpg )";
 
 function shuffle(project, projectsCheck, projects, button, sec) {
     'use strict';
