@@ -84,8 +84,8 @@ var projects = [
     'images/projects/3d/pistol.jpg',
     'images/projects/3d/rock.jpg',
     'images/projects/3d/Katana.jpg',
-    'images/projects/gspj/cover.jpg',
-    'images/projects/minibook/cover.jpg',
+    'images/projects/gspj/gspj.jpg',
+    'images/projects/minibook/minibook.jpg',
     'images/projects/github/login-page-cover.jpg'
 ],
 
