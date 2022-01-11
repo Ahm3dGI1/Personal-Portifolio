@@ -79,29 +79,19 @@ render();
 
 /*projects grid*/
 var projects = [
-    'images/projects/3d/doughnut.png',
-    'images/projects/3d/character.png',
-    'images/projects/3d/pistol.png',
-    'images/projects/3d/rock.png',
-    'images/projects/3d/Katana.png',
-    'images/projects/gspj/cover.png',
-    'images/projects/project6.png',
-    'images/projects/project7.png',
-    'images/projects/project8.png',
-    'images/projects/project9.jpg',
-    'images/projects/project10.jpg',
-    'images/projects/project11.jpg'
+    'images/projects/3d/doughnut.jpg',
+    'images/projects/3d/character.jpg',
+    'images/projects/3d/pistol.jpg',
+    'images/projects/3d/rock.jpg',
+    'images/projects/3d/Katana.jpg',
+    'images/projects/gspj/cover.jpg',
+    'images/projects/github/cover.jpg'
 ],
 
     projectsCheck = [
         true,
         true,
         true,
-        true,
-        true,
-        false,
-        false,
-        false,
         false,
         false,
         false,
@@ -116,9 +106,9 @@ projectb1 = { num: 0 },
     projectb2 = { num: 1 },
     projectb3 = { num: 2 };
 
-project1.style.backgroundImage = "url( images/projects/3d/doughnut.png )";
-project2.style.backgroundImage = "url( images/projects/3d/character.png )";
-project3.style.backgroundImage = "url( images/projects/3d/pistol.png )";
+project1.style.backgroundImage = "url( images/projects/3d/doughnut.jpg )";
+project2.style.backgroundImage = "url( images/projects/3d/character.jpg )";
+project3.style.backgroundImage = "url( images/projects/3d/pistol.jpg )";
 
 function shuffle(project, projectsCheck, projects, button, sec) {
     'use strict';
@@ -162,9 +152,9 @@ function box1(projectnum) {
 
     if (projectnum.num == 0) {
 
-        document.getElementById('pTitle').innerHTML = "project1";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
+        document.getElementById('pt1').innerHTML = "project1";
+        document.getElementById('pd1').src = projects[projectnum.num];
+        document.getElementById('pdi1').innerHTML = "New Name";
     }
 
     else if (projectnum.num == 1) {
@@ -253,7 +243,7 @@ function skill() {
     skillCurrent.classList.toggle('skill-active');
 
 
-    skillPreview.src = "images/skills/" + skillCurrent.id + ".png";
+    skillPreview.src = "images/skills/" + skillCurrent.id + ".jpg";
 
     if (skillCurrent.id == "html") {
         skillProjects[0].innerHTML = 'Projects';
