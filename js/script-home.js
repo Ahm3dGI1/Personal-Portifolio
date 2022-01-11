@@ -244,7 +244,7 @@ function skill() {
     skillCurrent.classList.toggle('skill-active');
 
 
-    skillPreview.src = "images/skills/" + skillCurrent.id + ".jpg";
+    skillPreview.src = "images/skills/" + skillCurrent.id + ".png";
 
     if (skillCurrent.id == "html") {
         skillProjects[0].innerHTML = 'Projects';
