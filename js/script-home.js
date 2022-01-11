@@ -79,7 +79,6 @@ render();
 
 /*projects grid*/
 var projects = [
-    'images/projects/github/doughnut.jpg',
     'images/projects/3d/doughnut.jpg',
     'images/projects/3d/character.jpg',
     'images/projects/3d/pistol.jpg',
