@@ -85,7 +85,8 @@ var projects = [
     'images/projects/3d/rock.jpg',
     'images/projects/3d/Katana.jpg',
     'images/projects/gspj/cover.jpg',
-    'images/projects/github/cover.jpg'
+    'images/projects/minibook/cover.jpg',
+    'images/projects/github/login-page-cover.jpg'
 ],
 
     projectsCheck = [
