@@ -80,9 +80,9 @@ render();
 /*projects grid*/
 var projects = [
     'images/projects/threed/doughnut.jpg',
-    'images/projects/threed/character.jpg',
-    'images/projects/threed/pistol.jpg',
     'images/projects/threed/rock.jpg',
+    'images/projects/threed/pistol.jpg',
+    'images/projects/threed/character.jpg',
     'images/projects/threed/Katana.jpg',
     'images/projects/gspj/gspj.jpg',
     'images/projects/minibook/minibook.jpg',
@@ -101,17 +101,29 @@ var projects = [
 
     project1 = document.getElementById('project1'),
     project2 = document.getElementById('project2'),
-    project3 = document.getElementById('project3');
+    project3 = document.getElementById('project3'),
+
+    ptitle1 = document.getElementById('pt1'),
+    ptitle2 = document.getElementById('pt2'),
+    ptitle3 = document.getElementById('pt3'),
+
+    pdate1 = document.getElementById('pd1'),
+    pdate2 = document.getElementById('pd2'),
+    pdate3 = document.getElementById('pd3'),
+
+    pdis1 = document.getElementById('pdi1'),
+    pdis2 = document.getElementById('pdi2'),
+    pdis3 = document.getElementById('pdi3');
 
 projectb1 = { num: 0 },
     projectb2 = { num: 1 },
     projectb3 = { num: 2 };
 
 project1.style.backgroundImage = "url( images/projects/threed/doughnut.jpg )";
-project2.style.backgroundImage = "url( images/projects/threed/character.jpg )";
+project2.style.backgroundImage = "url( images/projects/threed/rock.jpg )";
 project3.style.backgroundImage = "url( images/projects/threed/pistol.jpg )";
 
-function shuffle(project, projectsCheck, projects, button, sec) {
+function shuffle(project, projectsCheck, projects, button, title, date, dis, sec) {
     'use strict';
 
     var randomproject = 0,
@@ -124,110 +136,80 @@ function shuffle(project, projectsCheck, projects, button, sec) {
         while (projectsCheck[randomproject] == true || randomproject == oldproject) {
             randomproject = Math.floor(Math.random() * projects.length);
         }
-        projectsCheck[randomproject] = true;
-        project.style.backgroundImage = "url(" + projects[randomproject] + ")";
-        button.num = randomproject;
+
+        if (!project.matches(':hover')) {
+            projectsCheck[randomproject] = true;
+            project.style.backgroundImage = "url(" + projects[randomproject] + ")";
+            button.num = randomproject;
+
+            if (randomproject == 0) {
+                title.innerHTML = "3D Strawberry Doughnut asset";
+                date.innerHTML = "";
+                dis.innerHTML = "A 3D design for a doughnut made with blinder including the textures.";
+                button.href = ""
+            }
+
+            else if (randomproject == 1) {
+                title.innerHTML = '3D Rock asset';
+                date.innerHTML = "";
+                dis.innerHTML = "A low-poly 3D rock asset made with blender. It can be used in building a scene, an animation or a video game.";
+                button.href = ""
+            }
+
+            else if (randomproject == 2) {
+                title.innerHTML = "3D Pistol asset";
+                date.innerHTML = "";
+                dis.innerHTML = "A low-poly 3D pistol asset made with blender. It can be used in building a scene, an animation or a video game.";
+                button.href = ""
+            }
+
+            else if (randomproject == 3) {
+                title.innerHTML = "3D Character asset";
+                date.innerHTML = "";
+                dis.innerHTML = "A low-poly 3D Character asset made with blender. It can be used in building a scene, an animation or a video game.";
+                button.href = ""
+            }
+
+            else if (randomproject == 4) {
+                title.innerHTML = "3D Katana asset";
+                date.innerHTML = "";
+                dis.innerHTML = "A low-poly 3D Katana asset made with blender. It can be used in building a scene, an animation or a video game.";
+                button.href = ""
+            }
+
+            else if (randomproject == 5) {
+                title.innerHTML = "Gharbiya STEM Physics Journal";
+                date.innerHTML = "";
+                dis.innerHTML = "With all enthusiastic, GSPJ aspire to take the ensign of flaming the curiousity between high school students and below toward physics. GSPJ quarrel to make physics accessible for everyone with a simple yet informative review articles about different topics in physics.";
+                button.href = ""
+            }
+
+            else if (randomproject == 6) {
+                title.innerHTML = "Minibook";
+                date.innerHTML = "*Still in Progress*";
+                dis.innerHTML = "Minibook is a website designed to share summarys of books from different fields. This will help people who are busy most of there time to take the important values from these books.";
+                button.href = ""
+            }
+
+            else if (randomproject == 7) {
+                title.innerHTML = "Login Page Template";
+                date.innerHTML = "";
+                dis.innerHTML = "Login Page template that can be used in any website and you have the ability to edit the template so it can fit your needs.";
+                button.href = ""
+            }
+        }
 
     }
         , sec);
 }
 
-shuffle(project1, projectsCheck, projects, projectb1, 11000);
-shuffle(project2, projectsCheck, projects, projectb2, 9000);
-shuffle(project3, projectsCheck, projects, projectb3, 12000);
-
-/*projects popup*/
-
-function popup() {
-    var content = document.getElementById('content'),
-        nav = document.getElementById('nav'),
-        popup = document.getElementById('popup');
-
-    content.classList.toggle('blur');
-    nav.classList.toggle('blur');
-    popup.classList.toggle('popup-visible');
-}
+shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 11000);
+shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdate2, pdis2, 9000);
+shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdate3, pdis3, 12000);
 
 
-function box1(projectnum) {
 
-    if (projectnum.num == 0) {
 
-        document.getElementById('pt1').innerHTML = "project1";
-        document.getElementById('pd1').src = projects[projectnum.num];
-        document.getElementById('pdi1').innerHTML = "New Name";
-    }
-
-    else if (projectnum.num == 1) {
-
-        document.getElementById('pTitle').innerHTML = "project2";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-
-    else if (projectnum.num == 2) {
-
-        document.getElementById('pTitle').innerHTML = "project3";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-
-    else if (projectnum.num == 3) {
-
-        document.getElementById('pTitle').innerHTML = "project4";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-
-    else if (projectnum.num == 4) {
-
-        document.getElementById('pTitle').innerHTML = "project5";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-
-    else if (projectnum.num == 5) {
-
-        document.getElementById('pTitle').innerHTML = "project6";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-
-    else if (projectnum.num == 6) {
-
-        document.getElementById('pTitle').innerHTML = "project7";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-
-    else if (projectnum.num == 7) {
-
-        document.getElementById('pTitle').innerHTML = "project8";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-    else if (projectnum.num == 8) {
-
-        document.getElementById('pTitle').innerHTML = "project9";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-    else if (projectnum.num == 9) {
-
-        document.getElementById('pTitle').innerHTML = "project10";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-
-    else if (projectnum.num == 10) {
-
-        document.getElementById('pTitle').innerHTML = "project11";
-        document.getElementById('pImg').src = projects[projectnum.num];
-        document.getElementById('pDis').innerHTML = "New Name";
-    }
-
-    popup();
-}
 
 /*Skills*/
 var skillCurrent,

@@ -399,15 +399,24 @@ body{
     margin-top: 6px;
     color: #4E4E50;
     width: 90%;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     transition: 0.5s;
 }
 
-.project-details button{
+.projects-sub .project-details :nth-child(1){
+    font-size: 16px;
+}
+
+.projects-sub .project-details :nth-child(2), .projects-sub .project-details :nth-child(3){
+    font-size: 14px;
+}
+
+.project-details a{
     position: absolute;
     bottom: 10%;
     right: 10%;
+    font-size: 14px;
     background-color: transparent;
     border: none;
     color: #C3073F;
@@ -419,7 +428,7 @@ body{
 }
 
 .projects:hover .project-details, .projects-main:hover .project-details{
-    opacity: 0.8;
+    opacity: 0.9;
     height: 50%;
 }
 
