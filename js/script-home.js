@@ -79,6 +79,7 @@ render();
 
 /*projects grid*/
 var projects = [
+    'images/projects/stero/stero.jpg',
     'images/projects/threed/doughnut.jpg',
     'images/projects/threed/rock.jpg',
     'images/projects/threed/pistol.jpg',
@@ -93,6 +94,7 @@ var projects = [
         true,
         true,
         true,
+        false,
         false,
         false,
         false,
@@ -119,8 +121,8 @@ var projects = [
     projectb2 = document.getElementById('projectb2'),
     projectb3 = document.getElementById('projectb3');
 
-project1.style.backgroundImage = "url( images/projects/threed/doughnut.jpg )";
-project2.style.backgroundImage = "url( images/projects/threed/rock.jpg )";
+project1.style.backgroundImage = "url( images/projects/stero/stero.jpg )";
+project2.style.backgroundImage = "url( images/projects/threed/doughnut.jpg )";
 project3.style.backgroundImage = "url( images/projects/threed/pistol.jpg )";
 
 function shuffle(project, projectsCheck, projects, button, title, date, dis, sec) {
@@ -143,58 +145,72 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
             button.num = randomproject;
 
             if (randomproject == 0) {
-                title.innerHTML = "3D Strawberry Doughnut asset";
-                date.innerHTML = "";
-                dis.innerHTML = "A 3D design for a doughnut made with blinder including the textures.";
-                button.href = "https://github.com/Ahm3dGI1/3D-Doughnut-asset"
+                title.innerHTML = "Stero";
+                date.innerHTML = "*Still in progress*";
+                dis.innerHTML = "Stero is a 30 min 2D simple game. Although Stero might be a low quality game with ";
+                button.style.display = "none"
             }
 
             else if (randomproject == 1) {
-                title.innerHTML = '3D Rock asset';
+                title.innerHTML = "3D Strawberry Doughnut asset";
                 date.innerHTML = "";
-                dis.innerHTML = "A low-poly 3D rock asset made with blender. It can be used in building a scene, an animation or a video game.";
-                button.href = "https://github.com/Ahm3dGI1/3D-Rock-asset"
+                dis.innerHTML = "A 3D design for a doughnut made with blinder including the textures.";
+                button.style.display = "block"
+                button.href = "https://github.com/Ahm3dGI1/3D-Doughnut-asset"
             }
 
             else if (randomproject == 2) {
-                title.innerHTML = "3D Pistol asset";
+                title.innerHTML = '3D Rock asset';
                 date.innerHTML = "";
-                dis.innerHTML = "A low-poly 3D pistol asset made with blender. It can be used in building a scene, an animation or a video game.";
-                button.href = "https://github.com/Ahm3dGI1/3D-Pistol-asset"
+                dis.innerHTML = "A low-poly 3D rock asset made with blender. It can be used in building a scene, an animation or a video game.";
+                button.style.display = "block"
+                button.href = "https://github.com/Ahm3dGI1/3D-Rock-asset"
             }
 
             else if (randomproject == 3) {
-                title.innerHTML = "3D Character asset";
+                title.innerHTML = "3D Pistol asset";
                 date.innerHTML = "";
-                dis.innerHTML = "A low-poly 3D Character asset made with blender. It can be used in building a scene, an animation or a video game.";
-                button.href = "https://github.com/Ahm3dGI1/3D-Character-asset"
+                dis.innerHTML = "A low-poly 3D pistol asset made with blender. It can be used in building a scene, an animation or a video game.";
+                button.style.display = "block"
+                button.href = "https://github.com/Ahm3dGI1/3D-Pistol-asset"
             }
 
             else if (randomproject == 4) {
-                title.innerHTML = "3D Katana asset";
+                title.innerHTML = "3D Character asset";
                 date.innerHTML = "";
-                dis.innerHTML = "A low-poly 3D Katana asset made with blender. It can be used in building a scene, an animation or a video game.";
-                button.href = "https://github.com/Ahm3dGI1/3d-Katana-asset"
+                dis.innerHTML = "A low-poly 3D Character asset made with blender. It can be used in building a scene, an animation or a video game.";
+                button.style.display = "block"
+                button.href = "https://github.com/Ahm3dGI1/3D-Character-asset"
             }
 
             else if (randomproject == 5) {
-                title.innerHTML = "Gharbiya STEM Physics Journal";
+                title.innerHTML = "3D Katana asset";
                 date.innerHTML = "";
-                dis.innerHTML = "With all enthusiastic, GSPJ aspire to take the ensign of flaming the curiousity between high school students and below toward physics. GSPJ quarrel to make physics accessible for everyone with a simple yet informative review articles about different topics in physics.";
-                button.href = "https://gs-physics-journals.github.io/"
+                dis.innerHTML = "A low-poly 3D Katana asset made with blender. It can be used in building a scene, an animation or a video game.";
+                button.style.display = "block"
+                button.href = "https://github.com/Ahm3dGI1/3d-Katana-asset"
             }
 
             else if (randomproject == 6) {
-                title.innerHTML = "Minibook";
-                date.innerHTML = "*Still in Progress*";
-                dis.innerHTML = "Minibook is a website designed to share summarys of books from different fields. This will help people who are busy most of there time to take the important values from these books.";
-                button.innerHTML = "*Still in Progress*"
+                title.innerHTML = "Gharbiya STEM Physics Journal";
+                date.innerHTML = "";
+                dis.innerHTML = "With all enthusiastic, GSPJ aspire to take the ensign of flaming the curiousity between high school students and below toward physics. GSPJ quarrel to make physics accessible for everyone with a simple yet informative review articles about different topics in physics.";
+                button.style.display = "block"
+                button.href = "https://gs-physics-journals.github.io/"
             }
 
             else if (randomproject == 7) {
+                title.innerHTML = "Minibook";
+                date.innerHTML = "*Still in Progress*";
+                dis.innerHTML = "Minibook is a website designed to share summarys of books from different fields. This will help people who are busy most of there time to take the important values from these books.";
+                button.style.display = "none"
+            }
+
+            else if (randomproject == 8) {
                 title.innerHTML = "Login Page Template";
                 date.innerHTML = "";
                 dis.innerHTML = "Login Page template that can be used in any website and you have the ability to edit the template so it can fit your needs.";
+                button.style.display = "block"
                 button.href = "https://github.com/Ahm3dGI1/Login-page-Template"
             }
         }
