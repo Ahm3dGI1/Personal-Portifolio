@@ -35,8 +35,6 @@ body{
 
 .nav{
     position: fixed;
-    width: 70px;
-    height: 100vh;
     background-color: #4E4E50;
     transition: 200ms ease;
     z-index: 1;
@@ -76,21 +74,6 @@ body{
     display: none;
 }
 
-.logo:hover{
-    background-color: #1b1b1d;
-}
-
-.logo:hover div{
-    color:#C3073F;
-}
-
-.nav:hover .logo div{
-    display: block;
-}
-
-.nav:hover .logo{
-    width: 15vw;
-}
 
 .nav-item {
     width: 100%;
@@ -137,15 +120,6 @@ body{
     font-size: 33.75px;
 }
 
-.nav:hover{
-    width: 15vw;
-    border-left: #4E4E50 solid 3px;
-}
-
-.nav:hover .nav-text{
-    display: block;
-    margin-left: 20px;
-}
 
 .nav-item a span{
     opacity: 0;
@@ -369,11 +343,19 @@ body{
 .projects-main{
     width: 60%;
     height: 30.375vw;
+    filter: grayscale(100);
+    transition: 0.6s
 }
 
 .projects{
     width: 100%;
     height: 15.1vw;
+    filter: grayscale(100);
+    transition: 0.6s;
+}
+
+.projects:hover, .projects-main:hover{
+    filter: grayscale(0);
 }
 
 .project-details{
@@ -427,9 +409,14 @@ body{
     cursor: pointer;
 }
 
-.projects:hover .project-details, .projects-main:hover .project-details{
+.projects-main:hover .project-details{
     opacity: 0.9;
-    height: 50%;
+    height: 30%;    
+}
+
+.projects:hover .project-details{
+    opacity: 0.9;
+    height: 45%;
 }
 
 .more-projects{
@@ -1009,24 +996,174 @@ input:focus, #message:focus{
 }
 
 
-
 /*Medias*/
 
 @media (min-width: 1200px){
     
-}
-
-@media (min-width: 991px) and (max-width:1199px){
+    .nav{
+        width: 70px;
+        height: 100vh;
+    }
     
-}
+    .nav:hover{
+        width: 15vw;
+        border-left: #4E4E50 solid 3px;
+        }
+        
+        .logo:hover{
+            background-color: #1b1b1d;
+        }
+        
+        .logo:hover div{
+            color:#C3073F;
+        }
+        
+        .nav:hover .logo div{
+            display: block;
+        }
+        
+        .nav:hover .logo{
+            width: 15vw;
+        }
+        
+        .nav:hover .nav-text{
+            display: block;
+            margin-left: 20px;
+        }
+        
+    }
+    
+    @media (min-width: 991px) and (max-width:1199px){
+        
+    }
+    
+    @media (min-width: 768px) and (max-width:991px){
+        
+    }
+    
+    @media (max-width: 768px){
+        /* Navbar */
 
-@media (min-width: 768px) and (max-width:991px){
+        .nav{
+            bottom: 0%;
+            width: 100vw;
+            height: 50px;
+        }
 
-}
+        .logo{
+            display: none;
+        }
 
-@media (max-width: 768px){
+        .nav-links{
+            flex-direction: row;
+        }
 
-}
+        .nav-item{
+            justify-content: center;
+            width: fit-content;
+            height: 40px;
+            margin: auto;
+        }
+
+        .nav-item a{
+            height: 100%;
+            width: 100%;
+        }
+
+        .nav-text{
+            display: none;
+        }
+
+        /* Navbar */
+
+        /* Landing */
+
+        .content{
+            width: 100vw;
+            margin: 0;
+        }
+
+        .personal-photo, .welcome{
+            top: 30%;
+            left: 50%;
+            width: 50vw;
+            transform: translate(-50%, -50%);
+        }
+
+        .pp, .pp-solid {
+            width: 50vw;
+        }
+
+        .welcome{
+            top: 60%;
+            left: 50%;
+            width: 90vw;
+            font-size: 8vw;
+            text-align: center;
+        }
+
+        #job{
+            font-size: 5vw;
+        }
+
+        .discover-btn{
+            top: 70%;
+            width: 50vw;
+            font-size: 6vw;
+        }
+
+        /* Landing */
+
+        /* About */
+
+        .about-dis{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0px;
+            border-left: none;
+            text-align: center;
+        }
+
+        .tag, .about-dis :nth-child(2){
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-dis :nth-child(2){
+            padding: 20px;
+        }
+
+        .cont-404{
+            display: none;
+        }
+
+        /* About */
+
+        /* Projects */
+
+        #projects{
+            padding: 0;
+        }
+
+        .project-viewer{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0px;
+            border-left: none;
+            text-align: center;
+        }
+
+        /* Projects */
+
+        #contact, #skills{
+            display: none;
+        }
+        
+    }
+
+
 
 @keyframes org {
     5%{

@@ -147,7 +147,7 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
             if (randomproject == 0) {
                 title.innerHTML = "Stero";
                 date.innerHTML = "*Still in progress*";
-                dis.innerHTML = "Stero is a 30 min 2D simple game. Although Stero might be a low quality game with ";
+                dis.innerHTML = "Stero is a 30 min 2D simple game. Although Stero might be a game with low quality animation and gameplay, Stero is my first step in reaching my goals.";
                 button.style.display = "none"
             }
 
