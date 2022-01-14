@@ -8,6 +8,10 @@
     --color-black: #1b1b1b;
 }
 
+.mobile{
+    display: none;
+}
+
 body{
     margin: 0%;
     padding: 0;
@@ -1153,6 +1157,16 @@ input:focus, #message:focus{
             padding-left: 0px;
             border-left: none;
             text-align: center;
+        }
+
+        /* mobile */
+        body > *{
+            display: none;
+        }
+
+        .mobile{
+            display: block;
+            color: white;
         }
 
         /* Projects */
