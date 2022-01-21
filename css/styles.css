@@ -845,6 +845,10 @@ body{
 }
 
 .social-media div img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
     width: 35px;
     filter: grayscale(100);
     transition: 0.6s;
@@ -1161,6 +1165,10 @@ input:focus, #message:focus{
         /* mobile */
         body > *{
             display: none;
+        }
+
+        script {
+            display: block;
         }
 
         .mobile{
