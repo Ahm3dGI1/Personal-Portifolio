@@ -557,6 +557,16 @@ body{
     text-align: center;
 }
 
+.more-project-close span{
+    opacity: 1;
+    position: absolute;
+    bottom: 0%;
+    right: 1%;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 300;
+}
+
 .more-projects-project-container{
     opacity: 1;
     position: relative;
@@ -1251,6 +1261,14 @@ input:focus, #message:focus{
         .more-project-close{
             font-size: 20vw;
             line-height: 25vw;
+        }
+
+        .more-project-close span{
+            bottom: 2%;
+        }
+
+        .more-project-close span b{
+            display: none;
         }
 
         .more-projects-project-container{

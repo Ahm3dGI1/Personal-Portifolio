@@ -237,6 +237,15 @@ if (screen.width > 768){
 function moreProjectsOpen() {
     document.body.style.overflow = 'hidden';
     $(".more-projects").css('display', 'block');
+
+    $(document).ready(function() {
+        $(document).bind('keydown',function(e){
+           if(e.keyCode == 27) {
+                moreProjectsClose();
+           }
+        });
+    });
+
 }
 
 function moreProjectsClose() {
