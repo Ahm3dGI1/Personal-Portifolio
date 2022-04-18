@@ -5,6 +5,8 @@ $(window).bind('scroll', function () {
     }
 });
 
+if (screen.width > 768){
+
 /*Parallex*/
 
 document.addEventListener("mousemove", parallex);
@@ -19,6 +21,9 @@ function parallex(e) {
     document.getElementById("pp").style.transform = "translateX(" + -x + "px) translateY(" + -y + "px)";
     document.getElementById("pp-solid").style.transform = "translateX(" + -x / speed + "px) translateY(" + -y / speed + "px)";
 }
+
+/*Name*/
+
 
 /*404*/
 
@@ -77,6 +82,7 @@ function render() {
 
 render();
 
+}
 /*projects grid*/
 var projects = [
     'images/projects/stero/stero.jpg',
@@ -219,15 +225,27 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
         , sec);
 }
 
-shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 11000);
-shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdate2, pdis2, 9000);
-shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdate3, pdis3, 12000);
+if (screen.width <= 768)
+    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 4000);
+
+if (screen.width > 768){
+    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 11000);
+    shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdate2, pdis2, 9000);
+    shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdate3, pdis3, 12000);
+}
+
+function moreProjectsOpen() {
+    document.body.style.overflow = 'hidden';
+    $(".more-projects").css('display', 'block');
+}
+
+function moreProjectsClose() {
+    document.body.style.overflow = 'visible';
+    $(".more-projects").css('display', 'none');
+}
 
 
-
-
-
-/*Skills*/
+/* Skills */
 var skillCurrent,
     skillProjects = document.getElementById('skill-projects').getElementsByTagName('div'),
     skillExperience = document.getElementById('skill-experience').getElementsByTagName('div'),
