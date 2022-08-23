@@ -30,8 +30,8 @@
 
         <ul class="nav-links">
 
-            <li class="nav-item nav-active">
-                <a href="index.html">
+            <li class="nav-item">
+                <a href="#home">
                     <i class="fas fa-home"></i>
                     <div class="nav-text">Home</div>
                 </a>
@@ -63,19 +63,21 @@
 
     </nav>
     <div class="content" id="content">
-        <div class="landing-page" id="particles-js">
-            <div class="welcome" id="welcome">
-                Hello there,<br>
-                I'm Ahmed Gouda <br>
-                <span id="job">A Game & Web Developer</span>
-            </div>
+        <div id="home">
+            <div class="landing-page" id="particles-js">
+                <div class="welcome" id="welcome">
+                    Hello there,<br>
+                    I'm Ahmed Gouda <br>
+                    <span id="job">A Game & Web Developer</span>
+                </div>
 
-            <div class="personal-photo">
-                <img class="pp-solid" id="pp-solid" src="images/home/Me solid.png">
-                <img class="pp" id="pp" src="images/home/Me.png">
-            </div>
+                <div class="personal-photo">
+                    <img class="pp-solid" id="pp-solid" src="images/home/pps.png">
+                    <img class="pp" id="pp" src="images/home/pp.png">
+                </div>
 
-            <button class="discover-btn" onclick="window.location.href='#about'">Discover More!</button>
+                <button class="discover-btn" onclick="window.location.href='#about'">Discover More!</button>
+            </div>
         </div>
 
         <div id="about">
@@ -88,6 +90,13 @@
                     spread happiness inside many's hearts, or websites that help people in their daily life. I will do
                     my best to achieve this dream with my experience that will increase along the journey.
                 </div>
+
+                <a href="Ahmed Gouda's Resume.pdf" target="_blank">
+                    <button class="cv">
+                        View Resume
+                    </button>
+                </a>
+
                 <h1 class="tag">&lt;&#47;About&gt;</h1>
             </div>
             <!--404-->
@@ -102,7 +111,7 @@
         <div id="projects">
 
             <div class="project-viewer">
-                <h1 class="tag">&lt;Projects&gt;</h1>
+                <h1 class="tag">&lt;Work Samples&gt;</h1>
                 <div class="project-grid">
                     <div id="project1" class="projects-main">
                         <div class="project-details">
@@ -141,132 +150,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <a onclick="moreProjectsOpen()" class="more-projects-bttn">
-                        <button>View All</button>
-                    </a>
-
-                    <div class="more-projects">
-                            <div class="more-project-close" onclick="moreProjectsClose()">Scroll Vertically
-                                <span>Press <b>Escape or</b> anywhere to close.</span>
-                            </div>
-
-                            <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/stero/stero.jpg') no-repeat; background-size: 100%;">
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/github/login-page-cover.jpg') no-repeat; background-size: 100%;">
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/gspj/gspj.jpg') no-repeat; background-size: 100%;">
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/minibook/minibook.jpg') no-repeat; background-size: 100%;">
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/threed/character.jpg') no-repeat; background-size: 100%;">
-
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/threed/doughnut.jpg') no-repeat; background-size: 100%;">
-
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/threed/Katana.jpg') no-repeat; background-size: 100%;">
-
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/threed/pistol.jpg') no-repeat; background-size: 100%;">
-
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="more-projects-project">
-                            <div class="more-projects-project-container"
-                                style="background: url('images/projects/threed/rock.jpg') no-repeat; background-size: 100%;">
-
-                                <div class="project-details">
-                                    <div class="pt" id="pt1"></div>
-                                    <div class="pd" id="pd1"></div>
-                                    <div class="pdi" id="pdi1"></div>
-                                    <a id="projectb1" href="" target="_blank">ViewProject -></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <h1 class="tag">&lt;&#47;Projects&gt;</h1>
+                <h1 class="tag">&lt;&#47;Work Samples&gt;</h1>
             </div>
         </div>
 
@@ -281,17 +166,6 @@
                     <img src="images/skills/c-plusplus.png" id="c-plusplus" onclick="skill()">
                     <img src="images/skills/c-sharp.png" id="c-sharp" onclick="skill()">
                     <img src="images/skills/three-d.png" id="three-d" onclick="skill()">
-                </div>
-                <div class="skill-data">
-                    <div id="skill-projects">
-                        <div>Projects</div>
-                        <div>4</div>
-                    </div>
-
-                    <div id="skill-experience">
-                        <div>Years of Experience</div>
-                        <div>1</div>
-                    </div>
                 </div>
 
                 <li>
@@ -410,7 +284,7 @@
                         
                         <div class="org" id="org17">
                             <div class="org-box">
-                                <img src="images/contributions/shams.jpeg" alt="">
+                                <img src="images/contributions/shams.png" alt="">
                             </div>
                         </div>
                         
