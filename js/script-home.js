@@ -1,7 +1,23 @@
 /*nav*/
-$(window).bind('scroll', function () {
-    if ($(window).scrollTop() >= $('#about').offset().top - 50) {
-        document.getElementById("about").classList.add('.nav-active');
+$(window).scroll(function() {
+    if ($(window).scrollTop() >= $('#home').offset().top) {
+        $(".nav-item").removeClass("nav-active");
+        document.getElementById("ho").classList.add('nav-active');
+    }
+
+    if ($(window).scrollTop() >= $('#about').offset().top) {
+        $(".nav-item").removeClass("nav-active");
+        document.getElementById("ab").classList.add('nav-active');
+    }
+
+    if ($(window).scrollTop() >= $('#projects').offset().top-200) {
+        $(".nav-item").removeClass("nav-active");
+        document.getElementById("pr").classList.add('nav-active');
+    }
+
+    if ($(window).scrollTop() >= $('#contact').offset().top-500) {
+        $(".nav-item").removeClass("nav-active");
+        document.getElementById("co").classList.add('nav-active');
     }
 });
 
@@ -228,6 +244,7 @@ if (screen.width > 768){
 /* Skills */
 var skillCurrent,
     skillPreview = document.getElementById('skill-preview'),
+    skillExperience = document.getElementById('experience');
     skillProgress = document.getElementById('skill-progress');
 skillProgress.style.transition = '0.6s';
 
@@ -241,27 +258,33 @@ function skill() {
     skillPreview.src = "images/skills/" + skillCurrent.id + ".png";
 
     if (skillCurrent.id == "html") {
-        skillProgress.style.width = '80%';
+        skillExperience.innerHTML = "5 Years of experience"
+        skillProgress.style.width = '90%';
     }
 
     if (skillCurrent.id == "css") {
-        skillProgress.style.width = '74%';
+        skillExperience.innerHTML = "5 Years of experience"
+        skillProgress.style.width = '84%';
     }
 
     if (skillCurrent.id == "js") {
-        skillProgress.style.width = '65%';
-    }
-
-    if (skillCurrent.id == "c-plusplus") {
+        skillExperience.innerHTML = "4 Years of experience"
         skillProgress.style.width = '75%';
     }
 
+    if (skillCurrent.id == "c-plusplus") {
+        skillExperience.innerHTML = "6 Years of experience"
+        skillProgress.style.width = '86%';
+    }
+
     if (skillCurrent.id == "c-sharp") {
-        skillProgress.style.width = '60%';
+        skillExperience.innerHTML = "3 Years of experience"
+        skillProgress.style.width = '76%';
     }
 
     if (skillCurrent.id == "three-d") {
-        skillProgress.style.width = '70%';
+        skillExperience.innerHTML = "2 Years of experience"
+        skillProgress.style.width = '50%';
     }
 }
 
