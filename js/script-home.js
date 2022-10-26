@@ -1,5 +1,5 @@
 /*nav*/
-$(window).scroll(function() {
+$(window).scroll(function () {
     if ($(window).scrollTop() >= $('#home').offset().top) {
         $(".nav-item").removeClass("nav-active");
         document.getElementById("ho").classList.add('nav-active');
@@ -10,93 +10,93 @@ $(window).scroll(function() {
         document.getElementById("ab").classList.add('nav-active');
     }
 
-    if ($(window).scrollTop() >= $('#projects').offset().top-200) {
+    if ($(window).scrollTop() >= $('#projects').offset().top - 200) {
         $(".nav-item").removeClass("nav-active");
         document.getElementById("pr").classList.add('nav-active');
     }
 
-    if ($(window).scrollTop() >= $('#contact').offset().top-500) {
+    if ($(window).scrollTop() >= $('#contact').offset().top - 500) {
         $(".nav-item").removeClass("nav-active");
         document.getElementById("co").classList.add('nav-active');
     }
 });
 
-if (screen.width > 768){
+if (screen.width > 768) {
 
-/*Parallex*/
+    /*Parallex*/
 
-document.addEventListener("mousemove", parallex);
+    document.addEventListener("mousemove", parallex);
 
-function parallex(e) {
+    function parallex(e) {
 
-    var speed = 2
+        var speed = 2
 
-    var x = (e.clientX - screen.width / 2) * speed / 100
-    var y = (e.clientY - screen.height / 3) * speed / 100
+        var x = (e.clientX - screen.width / 2) * speed / 100
+        var y = (e.clientY - screen.height / 3) * speed / 100
 
-    document.getElementById("pp").style.transform = "translateX(" + -x + "px) translateY(" + -y + "px)";
-    document.getElementById("pp-solid").style.transform = "translateX(" + -x / speed + "px) translateY(" + -y / speed + "px)";
-}
+        document.getElementById("pp").style.transform = "translateX(" + -x + "px) translateY(" + -y + "px)";
+        document.getElementById("pp-solid").style.transform = "translateX(" + -x / speed + "px) translateY(" + -y / speed + "px)";
+    }
 
-/*Name*/
+    /*Name*/
 
 
-/*404*/
+    /*404*/
 
-var $container = document.querySelector('.bola')
-var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 10000);
-var scene = new THREE.Scene();
+    var $container = document.querySelector('.bola')
+    var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    var camera = new THREE.PerspectiveCamera(80, 1, 0.1, 10000);
+    var scene = new THREE.Scene();
 
-scene.add(camera);
-renderer.setSize(300, 300);
-$container.append(renderer.domElement);
+    scene.add(camera);
+    renderer.setSize(300, 300);
+    $container.append(renderer.domElement);
 
-///////////////////////////////////////////////
+    ///////////////////////////////////////////////
 
-// Camera
-camera.position.z = 200;
+    // Camera
+    camera.position.z = 200;
 
-// Material
-var pinkMat = new THREE.MeshPhongMaterial({
-    color: new THREE.Color("#C3073F"),
-    specular: new THREE.Color("#C3073F"),
-    shininess: 50,
-    shading: THREE.FlatShading,
-    transparent: 1,
-    opacity: 1
-});
+    // Material
+    var pinkMat = new THREE.MeshPhongMaterial({
+        color: new THREE.Color("#C3073F"),
+        specular: new THREE.Color("#C3073F"),
+        shininess: 50,
+        shading: THREE.FlatShading,
+        transparent: 1,
+        opacity: 1
+    });
 
-var L1 = new THREE.PointLight(0xffffff, 1);
-L1.position.z = 100;
-L1.position.y = 100;
-L1.position.x = 100;
-scene.add(L1);
+    var L1 = new THREE.PointLight(0xffffff, 1);
+    L1.position.z = 100;
+    L1.position.y = 100;
+    L1.position.x = 100;
+    scene.add(L1);
 
-var L2 = new THREE.PointLight(0xffffff, 0.8);
-L2.position.z = 200;
-L2.position.y = 400;
-L2.position.x = -100;
-scene.add(L2);
+    var L2 = new THREE.PointLight(0xffffff, 0.8);
+    L2.position.z = 200;
+    L2.position.y = 400;
+    L2.position.x = -100;
+    scene.add(L2);
 
-// IcoSphere -> THREE.IcosahedronGeometry(80, 1) 1-4
-var Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(75, 1), pinkMat);
-Ico.rotation.z = 0.5;
-scene.add(Ico);
+    // IcoSphere -> THREE.IcosahedronGeometry(80, 1) 1-4
+    var Ico = new THREE.Mesh(new THREE.IcosahedronGeometry(75, 1), pinkMat);
+    Ico.rotation.z = 0.5;
+    scene.add(Ico);
 
-function update() {
-    Ico.rotation.x += 2 / 100;
-    Ico.rotation.y += 2 / 100;
-}
+    function update() {
+        Ico.rotation.x += 2 / 100;
+        Ico.rotation.y += 2 / 100;
+    }
 
-// Render
-function render() {
-    requestAnimationFrame(render);
-    renderer.render(scene, camera);
-    update();
-}
+    // Render
+    function render() {
+        requestAnimationFrame(render);
+        renderer.render(scene, camera);
+        update();
+    }
 
-render();
+    render();
 
 }
 /*projects grid*/
@@ -235,7 +235,7 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 if (screen.width <= 768)
     shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 4000);
 
-if (screen.width > 768){
+if (screen.width > 768) {
     shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 11000);
     shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdate2, pdis2, 9000);
     shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdate3, pdis3, 12000);
@@ -245,7 +245,7 @@ if (screen.width > 768){
 var skillCurrent,
     skillPreview = document.getElementById('skill-preview'),
     skillExperience = document.getElementById('experience');
-    skillProgress = document.getElementById('skill-progress');
+skillProgress = document.getElementById('skill-progress');
 skillProgress.style.transition = '0.6s';
 
 function skill() {
@@ -262,27 +262,32 @@ function skill() {
         skillProgress.style.width = '90%';
     }
 
-    if (skillCurrent.id == "css") {
+    else if (skillCurrent.id == "css") {
         skillExperience.innerHTML = "5 Years of experience"
         skillProgress.style.width = '84%';
     }
 
-    if (skillCurrent.id == "js") {
+    else if (skillCurrent.id == "js") {
         skillExperience.innerHTML = "4 Years of experience"
         skillProgress.style.width = '75%';
     }
 
-    if (skillCurrent.id == "c-plusplus") {
+    else if (skillCurrent.id == "c-plusplus") {
         skillExperience.innerHTML = "6 Years of experience"
         skillProgress.style.width = '86%';
     }
 
-    if (skillCurrent.id == "c-sharp") {
-        skillExperience.innerHTML = "3 Years of experience"
+    else if (skillCurrent.id == "c-sharp") {
+        skillExperience.innerHTML = "4 Years of experience"
         skillProgress.style.width = '76%';
     }
 
-    if (skillCurrent.id == "three-d") {
+    else if (skillCurrent.id == "java") {
+        skillExperience.innerHTML = "2 Years of experience"
+        skillProgress.style.width = '60%';
+    }
+
+    else if (skillCurrent.id == "three-d") {
         skillExperience.innerHTML = "2 Years of experience"
         skillProgress.style.width = '50%';
     }
