@@ -217,6 +217,7 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
                 date.innerHTML = "*Still in Progress*";
                 dis.innerHTML = "Minibook is a website designed to share summarys of books from different fields. This will help people who are busy most of there time to take the important values from these books.";
                 button.style.display = "none"
+                button.href = "https://mini--book.web.app/"
             }
 
             else if (randomproject == 7) {
@@ -233,12 +234,12 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 }
 
 if (screen.width <= 768)
-    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 4000);
+    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 3000);
 
 if (screen.width > 768) {
-    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 11000);
-    shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdate2, pdis2, 9000);
-    shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdate3, pdis3, 12000);
+    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 3000);
+    shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdate2, pdis2, 2000);
+    shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdate3, pdis3, 4000);
 }
 
 /* Skills */
