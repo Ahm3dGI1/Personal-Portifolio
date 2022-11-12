@@ -109,11 +109,13 @@ var projects = [
     'images/projects/gspj/gspj.jpg',
     'images/projects/github/login-page-cover.jpg',
     'images/projects/github/stopwatch.jpg',
-    'images/projects/threed/tree.jpg'
+    'images/projects/threed/tree.jpg',
+    'images/projects/github/counter.jpg'
 ],
 
     projectsCheck = [
         true,
+        false,
         false,
         false,
         false,
@@ -231,6 +233,14 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
                 title.innerHTML = "3D Tree log";
                 date.innerHTML = "";
                 dis.innerHTML = "Blender-created 3D environment with a tree trunk and surrounding greenery.";
+                button.style.display = "block";
+                button.href = "https://github.com/Ahm3dGI1/Tree-trunk";
+            }
+
+            else if (randomproject == 9) {
+                title.innerHTML = "Real-time character counter";
+                date.innerHTML = "";
+                dis.innerHTML = "A dynamic character counter with adjustable maximum-length built with HTML, CSS, and JS.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Tree-trunk";
             }
