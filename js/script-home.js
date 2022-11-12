@@ -242,7 +242,7 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
                 date.innerHTML = "";
                 dis.innerHTML = "A dynamic character counter with adjustable maximum-length built with HTML, CSS, and JS.";
                 button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/Tree-trunk";
+                button.href = "https://github.com/Ahm3dGI1/Real-time-Character-Counter";
             }
         }
 
