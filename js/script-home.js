@@ -111,11 +111,13 @@ var projects = [
     'images/projects/github/stopwatch.jpg',
     'images/projects/threed/tree.jpg',
     'images/projects/github/counter.jpg',
-    'images/projects/github/canvas.jpg'
+    'images/projects/github/canvas.jpg',
+    'images/projects/github/countdown.jpg'
 ],
 
     projectsCheck = [
         true,
+        false,
         false,
         false,
         false,
@@ -252,6 +254,14 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
                 dis.innerHTML = "A simple dymanic web-canvas that can be edited to meet the user's needs";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Web-Canvas";
+            }
+
+            else if (randomproject == 11) {
+                title.innerHTML = "New Year Countdown";
+                date.innerHTML = "";
+                dis.innerHTML = "A simple dymanic year countdown with adjustable imputs";
+                button.style.display = "block";
+                button.href = "https://github.com/Ahm3dGI1/New-Year-Counter";
             }
         }
 

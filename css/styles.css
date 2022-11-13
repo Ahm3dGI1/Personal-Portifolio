@@ -336,6 +336,30 @@ body {
     border-left: #C3073F solid 3px;
 }
 
+.projects-btn {
+    position: absolute;
+    top: 4%;
+    right: 4.5%;
+    transform: translate(-50%);
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4E4E50;
+    color: #1b1b1d;
+    font-size: 1.3vw;
+    font-weight: bold;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.projects-btn:hover {
+    width: 160px;
+    height: 50px;
+    background-color: #C3073F;
+    font-size: 1.35vw;
+}
+
 .project-grid {
     margin-left: 13px;
 }
@@ -995,6 +1019,58 @@ input:focus,
     top: 50%;
 }
 
+
+/*Projects Page*/
+.projects-box {
+    position: relative;
+    float: left;
+    width: 31vw;
+    height: calc(4500 * 31vw / 8014);
+    background-size: cover;
+}
+
+.details {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 0%;
+    background-color: #1b1b1d;
+    opacity: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.details :nth-child(1) {
+    font-size: 16px;
+    color: #fff;
+}
+
+.details :nth-child(2),
+.details :nth-child(3) {
+    font-size: 14px;
+    color: #4E4E50;
+}
+
+.details a {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    color: #C3073F;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.projects-box:hover .details {
+    opacity: 0.9;
+    height: 45%;
+}
 
 /*Medias*/
 
