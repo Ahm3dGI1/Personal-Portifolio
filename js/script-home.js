@@ -110,7 +110,8 @@ var projects = [
     'images/projects/github/login-page-cover.jpg',
     'images/projects/github/stopwatch.jpg',
     'images/projects/threed/tree.jpg',
-    'images/projects/github/counter.jpg'
+    'images/projects/github/counter.jpg',
+    'images/projects/github/canvas.jpg'
 ],
 
     projectsCheck = [
@@ -243,6 +244,14 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
                 dis.innerHTML = "A dynamic character counter with adjustable maximum-length built with HTML, CSS, and JS.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Real-time-Character-Counter";
+            }
+
+            else if (randomproject == 10) {
+                title.innerHTML = "Web Canvas";
+                date.innerHTML = "";
+                dis.innerHTML = "A simple dymanic web-canvas that can be edited to meet the user's needs";
+                button.style.display = "block";
+                button.href = "https://github.com/Ahm3dGI1/Web-Canvas";
             }
         }
 
