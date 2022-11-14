@@ -112,11 +112,13 @@ var projects = [
     'images/projects/threed/tree.jpg',
     'images/projects/github/counter.jpg',
     'images/projects/github/canvas.jpg',
-    'images/projects/github/countdown.jpg'
+    'images/projects/github/countdown.jpg',
+    'images/projects/github/movies.png'
 ],
 
     projectsCheck = [
         true,
+        false,
         false,
         false,
         false,
@@ -262,6 +264,14 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
                 dis.innerHTML = "A simple dymanic year countdown with adjustable imputs";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/New-Year-Counter";
+            }
+
+            else if (randomproject == 12) {
+                title.innerHTML = "Movies Website Template";
+                date.innerHTML = "";
+                dis.innerHTML = "A Movie app based on TMDB API.";
+                button.style.display = "block";
+                button.href = "https://github.com/Ahm3dGI1/Moives-website-Template";
             }
         }
 
