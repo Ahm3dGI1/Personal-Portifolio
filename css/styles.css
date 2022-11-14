@@ -1042,14 +1042,20 @@ input:focus,
 }
 
 .details :nth-child(1) {
-    font-size: 16px;
     color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
 }
 
 .details :nth-child(2),
 .details :nth-child(3) {
-    font-size: 14px;
+    margin-top: 6px;
     color: #4E4E50;
+    width: 90%;
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.5s;
 }
 
 .details a {
