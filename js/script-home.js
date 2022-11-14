@@ -1,3 +1,45 @@
+/*Pre-loader*/
+let preLoader = document.querySelector('.pre-loader');
+let start = false;
+
+if (start == false) {
+    particleground(document.getElementById('particles-foreground'), {
+        dotColor: '#C3073F',
+        lineColor: '#C3073F88',
+        minSpeedX: 0.3,
+        maxSpeedX: 0.6,
+        minSpeedY: 0.3,
+        maxSpeedY: 0.6,
+        density: 50000, // One particle every n pixels
+        curvedLines: false,
+        proximity: 250, // How close two dots need to be before they join
+        parallaxMultiplier: 10, // Lower the number is more extreme parallax
+        particleRadius: 8, // Dot size
+    });
+
+    particleground(document.getElementById('particles-background'), {
+        dotColor: '#C3073F',
+        lineColor: '#C3073F88',
+        minSpeedX: 0.075,
+        maxSpeedX: 0.15,
+        minSpeedY: 0.075,
+        maxSpeedY: 0.15,
+        density: 30000, // One particle every n pixels
+        curvedLines: false,
+        proximity: 20, // How close two dots need to be before they join
+        parallaxMultiplier: 20, // Lower the number is more extreme parallax
+        particleRadius: 4, // Dot size
+    });
+
+    setInterval(() => {
+        preLoader.style.opacity = '0';
+
+        setInterval(() => {
+            preLoader.style.display = 'none';
+        }, 300)
+
+    }, 2000)
+}
 /*nav*/
 $(window).scroll(function () {
     if ($(window).scrollTop() >= $('#home').offset().top) {
@@ -38,8 +80,60 @@ if (screen.width > 768) {
         document.getElementById("pp-solid").style.transform = "translateX(" + -x / speed + "px) translateY(" + -y / speed + "px)";
     }
 
+    /*Hello*/
+    var textWrapper = document.querySelector('.hello .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
     /*Name*/
+    var textWrapper = document.querySelector('.name .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    /*Job*/
+    var textWrapper = document.querySelector('.job .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
+    anime.timeline({ loop: false })
+        .add({
+            delay: 2500
+        })
+        .add({
+            targets: '.hello .line',
+            scaleY: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeOutExpo",
+            duration: 700
+        })
+        .add({
+            targets: '.hello .line',
+            translateX: [0, document.querySelector('.hello .letters').getBoundingClientRect().width + 10],
+            easing: "easeOutExpo",
+            duration: 700,
+            delay: 100
+        }).add({
+            targets: '.hello .letter',
+            opacity: [0, 1],
+            opacity: 1,
+            easing: "easeOutExpo",
+            duration: 600,
+            offset: '-=775',
+            delay: (el, i) => 34 * (i + 1)
+        }).add({
+            targets: '.hello .line',
+            opacity: 0,
+            duration: 500,
+            easing: "easeOutExpo"
+        }).add({
+            targets: '.name .letter',
+            opacity: 1,
+            scale: [0, 1],
+            duration: 1500,
+            elasticity: 600,
+            delay: (el, i) => 45 * (i + 1)
+        }).add({
+            targets: '.job .letter',
+            opacity: 1,
+            rotateY: [-90, 0],
+            duration: 1300,
+            delay: (el, i) => 45 * i
+        });
 
     /*404*/
 
