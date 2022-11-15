@@ -195,14 +195,11 @@ body {
     transition: 200ms;
 }
 
-.logo img {
+#logo img {
     width: 50px;
     margin: 10px;
-    margin-left: 5px;
-}
-
-.logo div {
-    display: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

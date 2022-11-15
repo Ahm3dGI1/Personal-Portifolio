@@ -1,45 +1,43 @@
 /*Pre-loader*/
 let preLoader = document.querySelector('.pre-loader');
-let start = false;
 
-if (start == false) {
-    particleground(document.getElementById('particles-foreground'), {
-        dotColor: '#C3073F',
-        lineColor: '#C3073F88',
-        minSpeedX: 0.3,
-        maxSpeedX: 0.6,
-        minSpeedY: 0.3,
-        maxSpeedY: 0.6,
-        density: 50000, // One particle every n pixels
-        curvedLines: false,
-        proximity: 250, // How close two dots need to be before they join
-        parallaxMultiplier: 10, // Lower the number is more extreme parallax
-        particleRadius: 8, // Dot size
-    });
+particleground(document.getElementById('particles-foreground'), {
+    dotColor: '#C3073F',
+    lineColor: '#C3073F88',
+    minSpeedX: 0.3,
+    maxSpeedX: 0.6,
+    minSpeedY: 0.3,
+    maxSpeedY: 0.6,
+    density: 50000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 250, // How close two dots need to be before they join
+    parallaxMultiplier: 10, // Lower the number is more extreme parallax
+    particleRadius: 8, // Dot size
+});
 
-    particleground(document.getElementById('particles-background'), {
-        dotColor: '#C3073F',
-        lineColor: '#C3073F88',
-        minSpeedX: 0.075,
-        maxSpeedX: 0.15,
-        minSpeedY: 0.075,
-        maxSpeedY: 0.15,
-        density: 30000, // One particle every n pixels
-        curvedLines: false,
-        proximity: 20, // How close two dots need to be before they join
-        parallaxMultiplier: 20, // Lower the number is more extreme parallax
-        particleRadius: 4, // Dot size
-    });
+particleground(document.getElementById('particles-background'), {
+    dotColor: '#C3073F',
+    lineColor: '#C3073F88',
+    minSpeedX: 0.075,
+    maxSpeedX: 0.15,
+    minSpeedY: 0.075,
+    maxSpeedY: 0.15,
+    density: 30000, // One particle every n pixels
+    curvedLines: false,
+    proximity: 20, // How close two dots need to be before they join
+    parallaxMultiplier: 20, // Lower the number is more extreme parallax
+    particleRadius: 4, // Dot size
+});
+
+setInterval(() => {
+    preLoader.style.opacity = '0';
 
     setInterval(() => {
-        preLoader.style.opacity = '0';
+        preLoader.style.display = 'none';
+    }, 300)
 
-        setInterval(() => {
-            preLoader.style.display = 'none';
-        }, 300)
+}, 2000)
 
-    }, 2000)
-}
 /*nav*/
 $(window).scroll(function () {
     if ($(window).scrollTop() >= $('#home').offset().top) {
