@@ -192,176 +192,154 @@ if (screen.width > 768) {
 
 }
 /*projects grid*/
-var projects = [
-    'images/projects/threed/doughnut.jpg',
-    'images/projects/threed/rock.jpg',
-    'images/projects/threed/pistol.jpg',
-    'images/projects/threed/character.jpg',
-    'images/projects/threed/Katana.jpg',
-    'images/projects/gspj/gspj.jpg',
-    'images/projects/github/login-page-cover.jpg',
-    'images/projects/github/stopwatch.jpg',
-    'images/projects/threed/tree.jpg',
-    'images/projects/github/counter.jpg',
-    'images/projects/github/canvas.jpg',
-    'images/projects/github/countdown.jpg',
-    'images/projects/github/movies.jpg'
-],
 
-    projectsCheck = [
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-    ],
+var categoryCurrent;
 
-    project1 = document.getElementById('project1'),
-    project2 = document.getElementById('project2'),
-    project3 = document.getElementById('project3'),
+function Filter() {
+    $(".filter-active").removeClass("filter-active");
+    categoryCurrent = event.target;
 
-    ptitle2 = document.getElementById('pt2'),
-    ptitle3 = document.getElementById('pt3'),
+    categoryCurrent.classList.toggle('filter-active');
 
-    pdis2 = document.getElementById('pdi2'),
-    pdis3 = document.getElementById('pdi3'),
-
-    projectb2 = document.getElementById('projectb2'),
-    projectb3 = document.getElementById('projectb3');
-
-project1.style.backgroundImage = "url( images/projects/minibook/minibook.jpg )";
-project2.style.backgroundImage = "url( images/projects/threed/doughnut.jpg )";
-project3.style.backgroundImage = "url( images/projects/threed/pistol.jpg )";
-
-function shuffle(project, projectsCheck, projects, button, title, dis, sec) {
-    'use strict';
-
-    var randomproject = 0,
-        oldproject = 0;
-    setInterval(function () {
-
-        oldproject = randomproject;
-        projectsCheck[randomproject] = false;
-
-        while (projectsCheck[randomproject] == true || randomproject == oldproject) {
-            randomproject = Math.floor(Math.random() * projects.length);
-        }
-
-        if (!project.matches(':hover')) {
-            projectsCheck[randomproject] = true;
-            project.style.backgroundImage = "url(" + projects[randomproject] + ")";
-            button.num = randomproject;
-
-            if (randomproject == 0) {
-                title.innerHTML = "3D Strawberry Doughnut asset";
-                dis.innerHTML = "A 3D model of a doughnut created with blinder and containing textures.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/3D-Doughnut-asset";
-            }
-
-            else if (randomproject == 1) {
-                title.innerHTML = '3D Rock asset';
-                dis.innerHTML = "Blender-made 3D rock asset with low polygon count. It can be utilized in the creation of a scene, animation, or video game.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/3D-Rock-asset";
-            }
-
-            else if (randomproject == 2) {
-                title.innerHTML = "3D Pistol asset";
-                dis.innerHTML = "A 3D low-poly handgun asset made by Blender. It can be utilized in the creation of a scene, animation, or video game.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/3D-Pistol-asset";
-            }
-
-            else if (randomproject == 3) {
-                title.innerHTML = "3D Character asset";
-                dis.innerHTML = "A low-poly 3D Character model created with Blender. It can be used to construct a scene, animation, or video game.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/3D-Character-asset";
-            }
-
-            else if (randomproject == 4) {
-                title.innerHTML = "3D Katana asset";
-                dis.innerHTML = "Blender-created 3D low-poly Katana asset. It can be utilized in the creation of a scene, animation, or video game.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/3d-Katana-asset";
-            }
-
-            else if (randomproject == 5) {
-                title.innerHTML = "Gharbiya STEM Physics Journal";
-                dis.innerHTML = "With all enthusiastic, GSPJ aspire to take the ensign of flaming the curiousity between high school students and below toward physics. GSPJ quarrel to make physics accessible for everyone with a simple yet informative review articles about different topics in physics.";
-                button.style.display = "block";
-                button.href = "https://gs-physics-journals.github.io/";
-            }
-
-            else if (randomproject == 6) {
-                title.innerHTML = "Login Page Template";
-                dis.innerHTML = "Login Page template that can be used in any website and you have the ability to edit the template so it can fit your needs.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/Login-page-Template";
-            }
-
-            else if (randomproject == 7) {
-                title.innerHTML = "Web Stopwatch";
-                dis.innerHTML = "A web-stopwatch template with full functionality and a minimalistic style.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/Stopwatch-web-template";
-            }
-
-            else if (randomproject == 8) {
-                title.innerHTML = "3D Tree log";
-                dis.innerHTML = "Blender-created 3D environment with a tree trunk and surrounding greenery.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/Tree-trunk";
-            }
-
-            else if (randomproject == 9) {
-                title.innerHTML = "Real-time character counter";
-                dis.innerHTML = "A dynamic character counter with adjustable maximum-length built with HTML, CSS, and JS.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/Real-time-Character-Counter";
-            }
-
-            else if (randomproject == 10) {
-                title.innerHTML = "Web Canvas";
-                dis.innerHTML = "A simple dymanic web-canvas that can be edited to meet the user's needs";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/Web-Canvas";
-            }
-
-            else if (randomproject == 11) {
-                title.innerHTML = "New Year Countdown";
-                dis.innerHTML = "A simple dymanic year countdown with adjustable imputs";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/New-Year-Counter";
-            }
-
-            else if (randomproject == 12) {
-                title.innerHTML = "Movies Website Template";
-                dis.innerHTML = "A Movie app based on TMDB API.";
-                button.style.display = "block";
-                button.href = "https://github.com/Ahm3dGI1/Moives-website-Template";
-            }
-        }
-
+    if (categoryCurrent.id == "web") {
+        $('.web').parent().show();
+        $('.design').parent().hide();
     }
-        , sec);
+
+    else if (categoryCurrent.id == "design") {
+        $('.web').parent().hide();
+        $('.design').parent().show();
+    }
+
+    else {
+        $('.web').parent().show();
+        $('.design').parent().show();
+    }
 }
 
-if (screen.width <= 768)
-    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdis1, 3000);
 
-if (screen.width > 768) {
-    shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdis2, 4000);
-    shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdis3, 6000);
+
+var
+    project = document.getElementById('project'),
+    title = document.getElementById('pt'),
+    dis = document.getElementById('pdi'),
+    projectb = document.getElementById('projectb'),
+    projectCurrent;
+
+project.style.backgroundImage = "url( images/projects/minibook/minibook.jpg )";
+
+function Project() {
+    $(".project-text-active").removeClass("project-text-active");
+    projectCurrent = event.target;
+
+    projectCurrent.classList.toggle('project-text-active');
+
+    if (projectCurrent.id == "doughnut") {
+        title.innerHTML = "3D Strawberry Doughnut asset";
+        dis.innerHTML = "A 3D model of a doughnut created with blinder and containing textures.";
+        button.style.display = "block";
+        button.href = "https://github.com/Ahm3dGI1/3D-Doughnut-asset";
+        project.style.backgroundImage = "url( images/projects/threed/doughnut.jpg )";
+    }
+
+    else if (projectCurrent.id == "rock") {
+        title.innerHTML = '3D Rock asset';
+        dis.innerHTML = "Blender-made 3D rock asset with low polygon count. It can be utilized in the creation of a scene, animation, or video game.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/3D-Rock-asset";
+        project.style.backgroundImage = "url( images/projects/threed/rock.jpg )";
+    }
+
+    else if (projectCurrent.id == "handgun") {
+        title.innerHTML = "3D Handgun asset";
+        dis.innerHTML = "A 3D low-poly handgun asset made by Blender. It can be utilized in the creation of a scene, animation, or video game.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/3D-Pistol-asset";
+        project.style.backgroundImage = "url( images/projects/threed/pistol.jpg )";
+    }
+
+    else if (projectCurrent.id == "character") {
+        title.innerHTML = "3D Character asset";
+        dis.innerHTML = "A low-poly 3D Character model created with Blender. It can be used to construct a scene, animation, or video game.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/3D-Character-asset";
+        project.style.backgroundImage = "url( images/projects/threed/character.jpg )";
+    }
+
+    else if (projectCurrent.id == "katana") {
+        title.innerHTML = "3D Katana asset";
+        dis.innerHTML = "Blender-created 3D low-poly Katana asset. It can be utilized in the creation of a scene, animation, or video game.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/3d-Katana-asset";
+        project.style.backgroundImage = "url( images/projects/threed/katana.jpg )";
+    }
+
+    else if (projectCurrent.id == "gspj") {
+        title.innerHTML = "Gharbiya STEM Physics Journal";
+        dis.innerHTML = "With all enthusiastic, GSPJ aspire to take the ensign of flaming the curiousity between high school students and below toward physics. GSPJ quarrel to make physics accessible for everyone with a simple yet informative review articles about different topics in physics.";
+        projectb.style.display = "block";
+        projectb.href = "https://gs-physics-journals.github.io/";
+        project.style.backgroundImage = "url( images/projects/gspj/gspj.jpg )";
+    }
+
+    else if (projectCurrent.id == "login") {
+        title.innerHTML = "Login Page Template";
+        dis.innerHTML = "Login Page template that can be used in any website and you have the ability to edit the template so it can fit your needs.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/Login-page-Template";
+        project.style.backgroundImage = "url( images/projects/github/login-page-cover.jpg )";
+    }
+
+    else if (projectCurrent.id == "stopwatch") {
+        title.innerHTML = "Web Stopwatch";
+        dis.innerHTML = "A web-stopwatch template with full functionality and a minimalistic style.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/Stopwatch-web-template";
+        project.style.backgroundImage = "url( images/projects/github/stopwatch.jpg )";
+    }
+
+    else if (projectCurrent.id == "tree") {
+        title.innerHTML = "3D Tree log";
+        dis.innerHTML = "Blender-created 3D environment with a tree trunk and surrounding greenery.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/Tree-trunk";
+        project.style.backgroundImage = "url( images/projects/threed/tree.jpg )";
+    }
+
+    else if (projectCurrent.id == "counter") {
+        title.innerHTML = "Real-time character counter";
+        dis.innerHTML = "A dynamic character counter with adjustable maximum-length built with HTML, CSS, and JS.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/Real-time-Character-Counter";
+        project.style.backgroundImage = "url( images/projects/github/counter.jpg )";
+    }
+
+    else if (projectCurrent.id == "canvas") {
+        title.innerHTML = "Web Canvas";
+        dis.innerHTML = "A simple dymanic web-canvas that can be edited to meet the user's needs";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/Web-Canvas";
+        project.style.backgroundImage = "url( images/projects/github/canvas.jpg )";
+    }
+
+    else if (projectCurrent.id == "countdown") {
+        title.innerHTML = "New Year Countdown";
+        dis.innerHTML = "A simple dymanic year countdown with adjustable imputs";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/New-Year-Counter";
+        project.style.backgroundImage = "url( images/projects/github/countdown.jpg )";
+    }
+
+    else if (projectCurrent.id == "movies") {
+        title.innerHTML = "Movies Website Template";
+        dis.innerHTML = "A Movie app based on TMDB API.";
+        projectb.style.display = "block";
+        projectb.href = "https://github.com/Ahm3dGI1/Moives-website-Template";
+        project.style.backgroundImage = "url( images/projects/github/movies.jpg )";
+    }
 }
+
+
 
 /* Skills */
 var skillCurrent,
