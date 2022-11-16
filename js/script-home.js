@@ -290,6 +290,22 @@ function Project() {
         project.style.backgroundImage = "url( images/projects/github/login-page-cover.jpg )";
     }
 
+    else if (projectCurrent.id == "mint") {
+        title.innerHTML = "MINT Webview App";
+        dis.innerHTML = "Mint will empower you with all the tools you need to build & sustain the best Android app for your business!";
+        projectb.style.display = "block";
+        projectb.href = "https://themintapp.com";
+        project.style.backgroundImage = "url( images/projects/mint/mint.jpg )";
+    }
+
+    else if (projectCurrent.id == "console") {
+        title.innerHTML = "The MINT Console";
+        dis.innerHTML = "Mint Console is the tool we've built for you to configure and control your Mint Android App and it works flawlessly with its beautiful UX design & convenient control options.";
+        projectb.style.display = "block";
+        projectb.href = "https://console.themintapp.com";
+        project.style.backgroundImage = "url( images/projects/mint/console.jpg )";
+    }
+
     else if (projectCurrent.id == "stopwatch") {
         title.innerHTML = "Web Stopwatch";
         dis.innerHTML = "A web-stopwatch template with full functionality and a minimalistic style.";
