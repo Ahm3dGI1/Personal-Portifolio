@@ -205,7 +205,7 @@ var projects = [
     'images/projects/github/counter.jpg',
     'images/projects/github/canvas.jpg',
     'images/projects/github/countdown.jpg',
-    'images/projects/github/movies.png'
+    'images/projects/github/movies.jpg'
 ],
 
     projectsCheck = [
@@ -230,9 +230,6 @@ var projects = [
     ptitle2 = document.getElementById('pt2'),
     ptitle3 = document.getElementById('pt3'),
 
-    pdate2 = document.getElementById('pd2'),
-    pdate3 = document.getElementById('pd3'),
-
     pdis2 = document.getElementById('pdi2'),
     pdis3 = document.getElementById('pdi3'),
 
@@ -243,7 +240,7 @@ project1.style.backgroundImage = "url( images/projects/minibook/minibook.jpg )";
 project2.style.backgroundImage = "url( images/projects/threed/doughnut.jpg )";
 project3.style.backgroundImage = "url( images/projects/threed/pistol.jpg )";
 
-function shuffle(project, projectsCheck, projects, button, title, date, dis, sec) {
+function shuffle(project, projectsCheck, projects, button, title, dis, sec) {
     'use strict';
 
     var randomproject = 0,
@@ -264,7 +261,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             if (randomproject == 0) {
                 title.innerHTML = "3D Strawberry Doughnut asset";
-                date.innerHTML = "";
                 dis.innerHTML = "A 3D model of a doughnut created with blinder and containing textures.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/3D-Doughnut-asset";
@@ -272,7 +268,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 1) {
                 title.innerHTML = '3D Rock asset';
-                date.innerHTML = "";
                 dis.innerHTML = "Blender-made 3D rock asset with low polygon count. It can be utilized in the creation of a scene, animation, or video game.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/3D-Rock-asset";
@@ -280,7 +275,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 2) {
                 title.innerHTML = "3D Pistol asset";
-                date.innerHTML = "";
                 dis.innerHTML = "A 3D low-poly handgun asset made by Blender. It can be utilized in the creation of a scene, animation, or video game.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/3D-Pistol-asset";
@@ -288,7 +282,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 3) {
                 title.innerHTML = "3D Character asset";
-                date.innerHTML = "";
                 dis.innerHTML = "A low-poly 3D Character model created with Blender. It can be used to construct a scene, animation, or video game.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/3D-Character-asset";
@@ -296,7 +289,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 4) {
                 title.innerHTML = "3D Katana asset";
-                date.innerHTML = "";
                 dis.innerHTML = "Blender-created 3D low-poly Katana asset. It can be utilized in the creation of a scene, animation, or video game.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/3d-Katana-asset";
@@ -304,7 +296,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 5) {
                 title.innerHTML = "Gharbiya STEM Physics Journal";
-                date.innerHTML = "";
                 dis.innerHTML = "With all enthusiastic, GSPJ aspire to take the ensign of flaming the curiousity between high school students and below toward physics. GSPJ quarrel to make physics accessible for everyone with a simple yet informative review articles about different topics in physics.";
                 button.style.display = "block";
                 button.href = "https://gs-physics-journals.github.io/";
@@ -312,7 +303,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 6) {
                 title.innerHTML = "Login Page Template";
-                date.innerHTML = "";
                 dis.innerHTML = "Login Page template that can be used in any website and you have the ability to edit the template so it can fit your needs.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Login-page-Template";
@@ -320,7 +310,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 7) {
                 title.innerHTML = "Web Stopwatch";
-                date.innerHTML = "";
                 dis.innerHTML = "A web-stopwatch template with full functionality and a minimalistic style.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Stopwatch-web-template";
@@ -328,7 +317,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 8) {
                 title.innerHTML = "3D Tree log";
-                date.innerHTML = "";
                 dis.innerHTML = "Blender-created 3D environment with a tree trunk and surrounding greenery.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Tree-trunk";
@@ -336,7 +324,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 9) {
                 title.innerHTML = "Real-time character counter";
-                date.innerHTML = "";
                 dis.innerHTML = "A dynamic character counter with adjustable maximum-length built with HTML, CSS, and JS.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Real-time-Character-Counter";
@@ -344,7 +331,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 10) {
                 title.innerHTML = "Web Canvas";
-                date.innerHTML = "";
                 dis.innerHTML = "A simple dymanic web-canvas that can be edited to meet the user's needs";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Web-Canvas";
@@ -352,7 +338,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 11) {
                 title.innerHTML = "New Year Countdown";
-                date.innerHTML = "";
                 dis.innerHTML = "A simple dymanic year countdown with adjustable imputs";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/New-Year-Counter";
@@ -360,7 +345,6 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 
             else if (randomproject == 12) {
                 title.innerHTML = "Movies Website Template";
-                date.innerHTML = "";
                 dis.innerHTML = "A Movie app based on TMDB API.";
                 button.style.display = "block";
                 button.href = "https://github.com/Ahm3dGI1/Moives-website-Template";
@@ -372,11 +356,11 @@ function shuffle(project, projectsCheck, projects, button, title, date, dis, sec
 }
 
 if (screen.width <= 768)
-    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdate1, pdis1, 3000);
+    shuffle(project1, projectsCheck, projects, projectb1, ptitle1, pdis1, 3000);
 
 if (screen.width > 768) {
-    shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdate2, pdis2, 4000);
-    shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdate3, pdis3, 6000);
+    shuffle(project2, projectsCheck, projects, projectb2, ptitle2, pdis2, 4000);
+    shuffle(project3, projectsCheck, projects, projectb3, ptitle3, pdis3, 6000);
 }
 
 /* Skills */
