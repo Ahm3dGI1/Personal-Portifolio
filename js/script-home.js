@@ -286,7 +286,7 @@ function Project() {
         title.innerHTML = "Login Page Template";
         dis.innerHTML = "Login Page template that can be used in any website and you have the ability to edit the template so it can fit your needs.";
         projectb.style.display = "block";
-        projectb.href = "https://github.com/Ahm3dGI1/Login-page-Template";
+        projectb.href = "https://github.com/Ahm3dGI1/Login-page-cover.jpg";
         project.style.backgroundImage = "url( images/projects/github/login-page-cover.jpg )";
     }
 
