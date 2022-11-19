@@ -79,14 +79,14 @@ if (screen.width > 768) {
     }
 
     /*Hello*/
-    var textWrapper = document.querySelector('.hello .letters');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+    var helloWrapper = document.querySelector('.hello .letters');
+    helloWrapper.innerHTML = helloWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
     /*Name*/
-    var textWrapper = document.querySelector('.name .letters');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    var nameWrapper = document.querySelector('.name .letters');
+    nameWrapper.innerHTML = nameWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
     /*Job*/
-    var textWrapper = document.querySelector('.job .letters');
-    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    var jobWrabber = document.querySelector('.job .letters');
+    jobWrabber.innerHTML = jobWrabber.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     anime.timeline({ loop: false })
         .add({
@@ -132,17 +132,6 @@ if (screen.width > 768) {
             duration: 1300,
             delay: (el, i) => 45 * i
         });
-
-    const bouncy = document.querySelector(".letter");
-
-    bouncy.addEventListener("hover", toggleRubberBand);
-
-    function toggleRubberBand(e) {
-        bouncy.classList.add("bouncing");
-        bouncy.addEventListener("animationend", () => {
-            bouncy.classList.remove("bouncing");
-        });
-    }
 
     /*404*/
 

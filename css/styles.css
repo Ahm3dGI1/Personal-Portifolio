@@ -307,6 +307,7 @@ body {
     color: #fff;
     font-family: 'Asap', sans-serif;
     font-weight: 200;
+    cursor: default;
 }
 
 .hello .text-wrapper {
@@ -351,7 +352,8 @@ body {
     color: #4E4E50;
 }
 
-.bouncing {
+.letter:hover {
+    color: #C3073F;
     animation: rubberband 800ms alternate ease-out;
 }
 
