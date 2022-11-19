@@ -133,6 +133,17 @@ if (screen.width > 768) {
             delay: (el, i) => 45 * i
         });
 
+    const bouncy = document.querySelector(".letter");
+
+    bouncy.addEventListener("hover", toggleRubberBand);
+
+    function toggleRubberBand(e) {
+        bouncy.classList.add("bouncing");
+        bouncy.addEventListener("animationend", () => {
+            bouncy.classList.remove("bouncing");
+        });
+    }
+
     /*404*/
 
     var $container = document.querySelector('.bola')
